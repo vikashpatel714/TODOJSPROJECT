@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Todo App Js</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="m-list" class="m" data-animation="slideInOutDown">
+        <div class="m-dialog list--m--dialog">
+            <header class="m-header">
+                Add New List
+            </header>
+            <section class="m-content">
+                <input id="list-title" type="text" name="list" />
+            </section>
+            <footer class="m-footer">
+                <button id="add-card" class="close-m" aria-label="close m" data-close onclick="acceptData()">
+                    Add
+                </button>
+                <button class="close-m" aria-label="close m" data-close>
+                    Close
+                </button>
+            </footer>
+        </div>
+    </div>
+    <div id="m-list-2" class="m" data-animation="slideInOutDown">
+        <div class="m-dialog list--m--dialog">
+            <header class="m-header">
+                Add New Item
+            </header>
+            <section class="m-content">
+                <input id="list-item-title" type="text" name="list" />
+            </section>
+            <footer class="m-footer">
+                <button id="add-card-item" class="close-m" aria-label="close m-2" data-close
+                    onclick="addItems()">
+                    Add
+                </button>
+                <button class="close-m" aria-label="close m-2" data-close>
+                    Close
+                </button>
+            </footer>
+        </div>
+    </div>
+    <div id="card-m-list" class="m card__m" data-animation="slideInOutTop">
+        <div class="m-dialog">
+            <header class="card__m__header">
+                <span id="card-m-title" class="card__m__title">Trip to Paris</span>
+            </header>
+            <br />
+            <div class="card__m__buttons">
+                <div id="back-arrow" data-close>
+                    <i class="fa fa-arrow-circle-left" style="font-size:37px;color:red"></i>
+            <span id="back">Back</span>
+                </div>
+                <div id="add-arrow" data-open="m-list" data-close>
+                    <i class="fa fa-plus-circle" style="font-size:35px;color:red"></i>
+                    <span id="add">Add List</span>
+                </div>
+            </div>
+
+            <div id="card-detail" class="card card__list">
+                
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <header id="header">
+            <span id="header__title">
+                <span id="tasks">Tasks</span>
+                <span id="lists">Lists</span>
+            </span>
+            <span id="header__button" data-open="m-list">
+                <span id="add-button">
+                   <i class="fa fa-plus-circle" style="font-size:35px;color:red"></i>
+                </span>
+                <span id="add-list">Add List</span>
+            </span>
+        </header>
+        <main id="cards"> 
+        </main>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
